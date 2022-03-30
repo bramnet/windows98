@@ -21,7 +21,7 @@
 #       xhost +
 #
 
-FROM node:10.9-stretch
+FROM node:15-stretch
 
 LABEL maintainer "Paul DeCarlo <toolboc@gmail.com>"
 
@@ -34,6 +34,7 @@ RUN apt update && apt install -y \
     libasound2 \
     libxtst-dev \
     libxss1 \
+    python3>=3.6 \
     git \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
